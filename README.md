@@ -38,6 +38,18 @@ solana --version
 `rust-toolchain.toml` pins Rust `1.97.1`. The program itself is built with
 `cargo build-sbf`; the tests run on the host with LiteSVM.
 
+## Frontend
+
+The Next.js app lives in `app/`:
+
+```bash
+cd app
+npm install
+npm run dev
+```
+
+See `app/README.md` for the wallet flow, typed counter client, and smoke test.
+
 ## Build and test
 
 ```bash
@@ -264,7 +276,7 @@ account state directly.
 ```bash
 solana config set --url devnet
 solana airdrop 1
-anchor deploy
+anchor program deploy
 ```
 
 The program ID is in `Anchor.toml` and `declare_id!`. If you regenerate the
